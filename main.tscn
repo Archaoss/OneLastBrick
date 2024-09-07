@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://8mtskc3mfd6r"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_lp3pw"]
+[ext_resource type="Script" path="res://paddle.gd" id="2_3bgix"]
+[ext_resource type="Texture2D" uid="uid://uxsha7o0qxj1" path="res://images/star.png" id="3_v84sr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tjybm"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_lp3pw")
+
+[node name="Ball" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_tjybm")
+
+[node name="Paddle" type="CharacterBody2D" parent="."]
+script = ExtResource("2_3bgix")
+speed = 1000
+
+[node name="Sprite2D" type="Sprite2D" parent="Paddle"]
+position = Vector2(91, 572)
+texture = ExtResource("3_v84sr")
