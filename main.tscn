@@ -17,6 +17,7 @@ shape = SubResource("CircleShape2D_tjybm")
 
 [node name="Paddle" type="CharacterBody2D" parent="."]
 script = ExtResource("2_3bgix")
+width = 20
 speed = 1000
 
 [node name="Sprite2D" type="Sprite2D" parent="Paddle"]
