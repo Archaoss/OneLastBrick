@@ -1,4 +1,4 @@
 Mechanics
 =========
 
-Having the paddle follow the cursor but attached with aspring.
+Having the paddle follow the cursor but attached with a spring.
