@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
+
 @onready var viewport_width = get_viewport_rect().size;
 
 @export var width:  int = 50
 @export var height: int = 10
 @export var speed:  int = 100
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,7 +14,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta: float) -> void:
 	velocity = Vector2.ZERO # The player's movement vector.
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1

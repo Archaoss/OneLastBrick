@@ -1,25 +1,45 @@
-[gd_scene load_steps=5 format=3 uid="uid://8mtskc3mfd6r"]
+[gd_scene load_steps=9 format=3 uid="uid://8mtskc3mfd6r"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_lp3pw"]
-[ext_resource type="Script" path="res://scripts/paddle.gd" id="2_3bgix"]
-[ext_resource type="Texture2D" uid="uid://uxsha7o0qxj1" path="res://images/star.png" id="3_v84sr"]
+[ext_resource type="PackedScene" uid="uid://cxirmragua7gr" path="res://paddle.tscn" id="2_islsm"]
+[ext_resource type="PackedScene" uid="uid://d2nqd86k3nlt8" path="res://ball.tscn" id="2_l2ai3"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tjybm"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ka06k"]
+bounce = 0.3
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ua8mn"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0ay7t"]
+distance = -1080.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6mmx8"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y7d0g"]
+normal = Vector2(-1, 0)
+distance = -1920.0
 
 [node name="Main" type="Node"]
 script = ExtResource("1_lp3pw")
 
-[node name="Ball" type="Area2D" parent="."]
-visible = false
+[node name="Ball" parent="." instance=ExtResource("2_l2ai3")]
+position = Vector2(960, 720)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
-shape = SubResource("CircleShape2D_tjybm")
+[node name="Paddle" parent="." instance=ExtResource("2_islsm")]
+position = Vector2(960, 1040)
 
-[node name="Paddle" type="CharacterBody2D" parent="."]
-script = ExtResource("2_3bgix")
-width = 20
-speed = 1000
+[node name="Walls" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_ka06k")
 
-[node name="Sprite2D" type="Sprite2D" parent="Paddle"]
-position = Vector2(91, 572)
-texture = ExtResource("3_v84sr")
+[node name="Top" type="CollisionShape2D" parent="Walls"]
+shape = SubResource("WorldBoundaryShape2D_ua8mn")
+
+[node name="Bottom" type="CollisionShape2D" parent="Walls"]
+shape = SubResource("WorldBoundaryShape2D_0ay7t")
+
+[node name="Left" type="CollisionShape2D" parent="Walls"]
+shape = SubResource("WorldBoundaryShape2D_6mmx8")
+
+[node name="Right" type="CollisionShape2D" parent="Walls"]
+shape = SubResource("WorldBoundaryShape2D_y7d0g")
