@@ -4,13 +4,15 @@
 [ext_resource type="Script" path="res://scripts/ball.gd" id="1_hdb8l"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2hxeg"]
-bounce = 0.66
+bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d445l"]
 radius = 17.0
 
 [node name="Ball" type="RigidBody2D"]
+position = Vector2(1, 0)
 physics_material_override = SubResource("PhysicsMaterial_2hxeg")
+gravity_scale = 0.0
 script = ExtResource("1_hdb8l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -89,15 +89,14 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 main.gd
-badd +1 ball.gd
-badd +0 paddle.gd
+badd +3 main.gd
+badd +15 ball.gd
+badd +1 paddle.gd
 argglobal
 %argdel
 $argadd main.gd
-edit paddle.gd
+edit ball.gd
 argglobal
-balt ball.gd
 let s:cpo_save=&cpo
 set cpo&vim
 inoremap <buffer> <silent> <M-n> :call AutoPairsJump()a
@@ -284,12 +283,13 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 16) / 33)
+let s:l = 13 - ((12 * winheight(0) + 16) / 33)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 13
 normal! 0
+lcd ~/Documents/dev/OneLastBrick/scripts
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf

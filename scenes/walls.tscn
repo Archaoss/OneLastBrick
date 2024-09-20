@@ -1,0 +1,62 @@
+[gd_scene load_steps=10 format=3 uid="uid://ckc2iu2kubfp0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pylmc"]
+bounce = 1.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0u7aa"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p5ro0"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nmdhc"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8sf3a"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fkvnc"]
+normal = Vector2(1, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v7k73"]
+normal = Vector2(-1, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pt6lr"]
+normal = Vector2(1, -1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yr5kg"]
+normal = Vector2(-1, -1)
+
+[node name="Walls" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_pylmc")
+
+[node name="Top" type="CollisionShape2D" parent="."]
+position = Vector2(960, 0)
+shape = SubResource("WorldBoundaryShape2D_0u7aa")
+
+[node name="Bottom" type="CollisionShape2D" parent="."]
+position = Vector2(960, 1080)
+shape = SubResource("WorldBoundaryShape2D_p5ro0")
+
+[node name="Left" type="CollisionShape2D" parent="."]
+position = Vector2(0, 540)
+shape = SubResource("WorldBoundaryShape2D_nmdhc")
+
+[node name="Right" type="CollisionShape2D" parent="."]
+position = Vector2(1920, 540)
+shape = SubResource("WorldBoundaryShape2D_8sf3a")
+
+[node name="TopLeft" type="CollisionShape2D" parent="."]
+position = Vector2(10, 10)
+shape = SubResource("WorldBoundaryShape2D_fkvnc")
+
+[node name="TopRight" type="CollisionShape2D" parent="."]
+position = Vector2(1910, 10)
+shape = SubResource("WorldBoundaryShape2D_v7k73")
+
+[node name="BottomLeft" type="CollisionShape2D" parent="."]
+position = Vector2(10, 1070)
+shape = SubResource("WorldBoundaryShape2D_pt6lr")
+
+[node name="BottomRight" type="CollisionShape2D" parent="."]
+position = Vector2(1910, 1070)
+shape = SubResource("WorldBoundaryShape2D_yr5kg")
