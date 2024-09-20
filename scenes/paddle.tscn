@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxirmragua7gr"]
 
 [ext_resource type="Script" path="res://scripts/paddle.gd" id="1_m0fj5"]
-[ext_resource type="Texture2D" uid="uid://uxsha7o0qxj1" path="res://images/star.png" id="2_sxw3w"]
+[ext_resource type="Texture2D" uid="uid://db7iqqhmfurde" path="res://images/paddle.png" id="2_bnf23"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1j8dj"]
 radius = 12.0
@@ -12,11 +12,9 @@ script = ExtResource("1_m0fj5")
 speed = 1000
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -3.8743e-07)
-scale = Vector2(1, 0.154839)
-texture = ExtResource("2_sxw3w")
+scale = Vector2(3.38, 2.4)
+texture = ExtResource("2_bnf23")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.1875, 0)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_1j8dj")

@@ -1,7 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://ckc2iu2kubfp0"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pylmc"]
-bounce = 1.0
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_24pvo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0u7aa"]
 normal = Vector2(0, 1)
@@ -27,7 +26,7 @@ normal = Vector2(1, -1)
 normal = Vector2(-1, -1)
 
 [node name="Walls" type="StaticBody2D"]
-physics_material_override = SubResource("PhysicsMaterial_pylmc")
+physics_material_override = SubResource("PhysicsMaterial_24pvo")
 
 [node name="Top" type="CollisionShape2D" parent="."]
 position = Vector2(960, 0)
