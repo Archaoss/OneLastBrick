@@ -6,11 +6,4 @@ var velocity := Vector2()
 
 
 func _ready() -> void:
-	velocity = Vector2.from_angle(randf()) * speed
-
-
-func _physics_process(delta: float) -> void:
-	position += velocity * delta
-	var infocol = move_and_collide(velocity * delta)
-# 	if infocol:
-# 		print(infocol)
+	velocity = Vector2.from_angle(randf() * 2 * PI) * speed
