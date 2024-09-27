@@ -1,37 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckc2iu2kubfp0"]
+[gd_scene load_steps=4 format=3 uid="uid://ckc2iu2kubfp0"]
 
 [ext_resource type="Script" path="res://scripts/walls.gd" id="1_ida5c"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_24pvo"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fkvnc"]
-normal = Vector2(1, 1)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_v7k73"]
-normal = Vector2(-1, 1)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pt6lr"]
-normal = Vector2(1, -1)
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yr5kg"]
-normal = Vector2(-1, -1)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sv8yh"]
 
 [node name="Walls" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_24pvo")
 script = ExtResource("1_ida5c")
+corner_offset = 200
 
-[node name="TopLeft" type="CollisionShape2D" parent="."]
-position = Vector2(10, 10)
-shape = SubResource("WorldBoundaryShape2D_fkvnc")
-
-[node name="TopRight" type="CollisionShape2D" parent="."]
-position = Vector2(1910, 10)
-shape = SubResource("WorldBoundaryShape2D_v7k73")
-
-[node name="BottomLeft" type="CollisionShape2D" parent="."]
-position = Vector2(10, 1070)
-shape = SubResource("WorldBoundaryShape2D_pt6lr")
-
-[node name="BottomRight" type="CollisionShape2D" parent="."]
-position = Vector2(1910, 1070)
-shape = SubResource("WorldBoundaryShape2D_yr5kg")
+[node name="Dummy" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_sv8yh")
