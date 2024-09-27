@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://8mtskc3mfd6r"]
+[gd_scene load_steps=5 format=3 uid="uid://8mtskc3mfd6r"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_lp3pw"]
 [ext_resource type="PackedScene" uid="uid://d2nqd86k3nlt8" path="res://scenes/ball.tscn" id="2_ub5lu"]
-[ext_resource type="PackedScene" uid="uid://ci85srjw3cue7" path="res://scenes/brick.tscn" id="3_m55pp"]
 [ext_resource type="PackedScene" uid="uid://cxirmragua7gr" path="res://scenes/paddle.tscn" id="3_oj06k"]
 [ext_resource type="PackedScene" uid="uid://ckc2iu2kubfp0" path="res://scenes/walls.tscn" id="5_gcfsb"]
 
@@ -11,8 +10,6 @@ script = ExtResource("1_lp3pw")
 
 [node name="Ball" parent="." instance=ExtResource("2_ub5lu")]
 position = Vector2(966, 533)
-
-[node name="Brick" parent="." instance=ExtResource("3_m55pp")]
 
 [node name="Paddle" parent="." instance=ExtResource("3_oj06k")]
 position = Vector2(960, 1040)
