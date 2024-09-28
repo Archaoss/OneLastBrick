@@ -9,7 +9,6 @@
 [node name="Walls" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_24pvo")
 script = ExtResource("1_ida5c")
-corner_offset = 200
 
 [node name="Dummy" type="CollisionShape2D" parent="."]
 shape = SubResource("WorldBoundaryShape2D_sv8yh")
