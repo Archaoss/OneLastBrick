@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://8mtskc3mfd6r"]
+[gd_scene load_steps=6 format=3 uid="uid://8mtskc3mfd6r"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_lp3pw"]
 [ext_resource type="PackedScene" uid="uid://d2nqd86k3nlt8" path="res://scenes/ball.tscn" id="2_ub5lu"]
 [ext_resource type="PackedScene" uid="uid://cxirmragua7gr" path="res://scenes/paddle.tscn" id="3_oj06k"]
+[ext_resource type="Texture2D" uid="uid://cqkya6t7oqjxs" path="res://images/debug.png" id="5_fc1km"]
 [ext_resource type="PackedScene" uid="uid://ckc2iu2kubfp0" path="res://scenes/walls.tscn" id="5_gcfsb"]
 
 [node name="Main" type="Node"]
@@ -15,3 +16,8 @@ position = Vector2(966, 533)
 position = Vector2(960, 1040)
 
 [node name="Walls" parent="." instance=ExtResource("5_gcfsb")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(150, 500)
+scale = Vector2(42.75, 42.75)
+texture = ExtResource("5_fc1km")
