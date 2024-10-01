@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/ball.gd" id="1_hdb8l"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dfa3p"]
-bounce = 1.0
+bounce = 0.9
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d445l"]
 radius = 17.0
@@ -12,6 +12,8 @@ radius = 17.0
 [node name="Ball" type="RigidBody2D"]
 position = Vector2(1, 0)
 physics_material_override = SubResource("PhysicsMaterial_dfa3p")
+contact_monitor = true
+max_contacts_reported = 8
 script = ExtResource("1_hdb8l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -20,3 +22,5 @@ texture = ExtResource("1_5h1pw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_d445l")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

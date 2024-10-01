@@ -9,7 +9,6 @@ extends CharacterBody2D
 
 
 func _ready():
-# 	transform.origin = Vector2(viewport_width.x / 2, 40)
 	position.x = viewport_size.x / 2;
 	position.y = viewport_size.y - 40;
 	pass
