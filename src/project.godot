@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="One Last Brick"
-config/description="A \"roguelike\" take on arkanoid."
 config/version="0.0.1"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
@@ -27,6 +26,10 @@ AudioManager="*res://scripts/audio_manager.gd"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="viewport"
+
+[gui]
+
+theme/custom="res://theme.tres"
 
 [input]
 

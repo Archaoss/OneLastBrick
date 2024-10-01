@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/ball.gd" id="1_hdb8l"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dfa3p"]
-bounce = 0.9
+bounce = 1.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d445l"]
 radius = 17.0

@@ -9,5 +9,5 @@ func _ready() -> void:
 		* speed
 
 
-func _on_body_entered(body: Node) -> void:
+func _on_body_entered(_body: Node) -> void:
 	AudioManager.play(AudioManager.ball_hit)

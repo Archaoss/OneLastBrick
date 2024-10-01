@@ -34,9 +34,7 @@ func _process(_delta: float) -> void:
 
 
 func play(sound: AudioStream) -> void:
-	print(sound)
 	queue.append(sound)
-	print(available.size())
 
 
 func _on_finished(player: AudioStreamPlayer) -> void:

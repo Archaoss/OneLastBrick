@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://8mtskc3mfd6r"]
+[gd_scene load_steps=6 format=3 uid="uid://8mtskc3mfd6r"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_lp3pw"]
 [ext_resource type="PackedScene" uid="uid://d2nqd86k3nlt8" path="res://scenes/ball.tscn" id="2_ub5lu"]
 [ext_resource type="PackedScene" uid="uid://cxirmragua7gr" path="res://scenes/paddle.tscn" id="3_oj06k"]
+[ext_resource type="PackedScene" uid="uid://bgc21aiqf4bly" path="res://scenes/ui.tscn" id="5_ddfiy"]
 [ext_resource type="PackedScene" uid="uid://ckc2iu2kubfp0" path="res://scenes/walls.tscn" id="5_gcfsb"]
 
 [node name="Main" type="Node"]
@@ -15,3 +16,10 @@ position = Vector2(966, 533)
 position = Vector2(960, 1040)
 
 [node name="Walls" parent="." instance=ExtResource("5_gcfsb")]
+
+[node name="UI" parent="." instance=ExtResource("5_ddfiy")]
+anchors_preset = -1
+anchor_bottom = 0.198
+offset_left = 118.0
+offset_right = -124.0
+offset_bottom = -78.84
