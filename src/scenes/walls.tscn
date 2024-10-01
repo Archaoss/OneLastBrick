@@ -20,24 +20,24 @@ distance = -1080.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_o5ak5"]
 normal = Vector2(1, 1)
-distance = 60.0
+distance = 40.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rxgo1"]
 normal = Vector2(-1, 1)
-distance = 60.0
+distance = 40.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bs6iv"]
 normal = Vector2(1, -1)
-distance = 60.0
+distance = 40.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ny5i2"]
 normal = Vector2(-1, -1)
-distance = 60.0
+distance = 40.0
 
 [node name="Walls" type="StaticBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_24pvo")
 script = ExtResource("1_ida5c")
-corner_offset = 60
+corner_offset = 40
 
 [node name="Left" type="CollisionShape2D" parent="."]
 shape = SubResource("WorldBoundaryShape2D_6eqqo")
@@ -68,23 +68,23 @@ shape = SubResource("WorldBoundaryShape2D_ny5i2")
 
 [node name="SpriteTL" type="Sprite2D" parent="."]
 rotation = 0.785398
-scale = Vector2(84.8528, 84.8528)
+scale = Vector2(56.5685, 56.5685)
 texture = ExtResource("2_spq1w")
 
 [node name="SpriteTR" type="Sprite2D" parent="."]
 position = Vector2(1920, 0)
 rotation = 0.785398
-scale = Vector2(84.8528, 84.8528)
+scale = Vector2(56.5685, 56.5685)
 texture = ExtResource("2_spq1w")
 
 [node name="SpriteBL" type="Sprite2D" parent="."]
 position = Vector2(0, 1080)
 rotation = 0.785398
-scale = Vector2(84.8528, 84.8528)
+scale = Vector2(56.5685, 56.5685)
 texture = ExtResource("2_spq1w")
 
 [node name="SpriteBR" type="Sprite2D" parent="."]
 position = Vector2(1920, 1080)
 rotation = 0.785398
-scale = Vector2(84.8528, 84.8528)
+scale = Vector2(56.5685, 56.5685)
 texture = ExtResource("2_spq1w")
